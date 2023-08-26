@@ -19,7 +19,6 @@ function ProjectEdit() {
         if (localStorage.getItem('token') == null) {
             navigate("/");
         }
-
         axiosInstance.get(`/projects/${id}`)
             .then(function (response) {
                 let project = response.data
@@ -34,7 +33,6 @@ function ProjectEdit() {
                     timer: 1500
                 })
             })
-
     }, [])
 
 
